@@ -1,0 +1,23 @@
+@import "partials/variables";
+@import "partials/fonts+colors";
+@import "partials/reset";
+
+.navbar {
+    background-color: $bandsite-black;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__header {
+        @include page-header;
+    
+    }
+
+    &__subheader {
+        @include subheader;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100vw;
+    }
+}

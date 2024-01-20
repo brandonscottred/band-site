@@ -1,0 +1,71 @@
+// mobile text styles
+@mixin page-header {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: avenirNextBold;
+}
+
+@mixin section-header {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: avenirNextBold;
+}
+
+@mixin subheader {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: avenirNextDemi;
+}
+
+@mixin body-copy {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+@mixin footer-copy {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+@mixin labels-buttons {
+    font-size: 10px;
+    line-height: 20px;
+    font-family: avenirNextBold;;
+}
+
+// desktop&tablet text styles
+// @mixin page-header {
+//     font-size: 60px;
+//     line-height: 68px;
+//     font-weight: $bold;
+// }
+
+// @mixin section-header {
+//     font-size: 36px;
+//     line-height: 44px;
+//     font-weight: $bold;
+// }
+
+// @mixin subheader {
+//     font-size: 24px;
+//     line-height: 32px;
+//     font-weight: $demi;
+// }
+
+// @mixin body-copy {
+//     font-size: 14px;
+//     line-height: 22px;
+//     font-weight: $regular;
+// }
+
+// @mixin footer-copy {
+//     font-size: 14px;
+//     line-height: 20px;
+//     font-weight: $regular;
+// }
+
+// @mixin labels-buttons {
+//     font-size: 12px;
+//     line-height: 20px;
+//     font-weight: $bold;
+// }
