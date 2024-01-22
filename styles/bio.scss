@@ -8,16 +8,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    &__header {
-        @include page-header;
-    
+    padding-top: 1rem;
+
+    &__logo {
+
+        img {
+            width: 120px;
+        }
     }
 
     &__subheader {
-        @include subheader;
         display: flex;
-        justify-content: space-evenly;
         width: 100vw;
+        @include subheader;
+
+        &--biography {
+            border-bottom: white 4px solid;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        &--shows {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            color: $mercury;
+        }
     }
 }
+
+
+// media queries lab + responsive design lab
+// include tablet + desktop
+// @include
