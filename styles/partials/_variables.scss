@@ -17,75 +17,105 @@
     }
 };
 
-// mobile text styles
-
+// font-styles media-querie breakpoints
 @mixin page-header {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-family: avenirNextBold;
+    @include mobile {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-family: avenirNextBold;
+    }
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+        font-family: avenirNextBold;
+    }
+    @include desktop {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+        font-family: avenirNextBold;
+    }
 }
 
 @mixin section-header {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-family: avenirNextBold;
+    @include mobile {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-family: avenirNextBold;
+    }
+    @include tablet {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        font-family: avenirNextBold;
+    }
+    @include desktop {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        font-family: avenirNextBold;
+    }
 }
 
 @mixin subheader {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-family: avenirNextDemi;
+    @include mobile {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-family: avenirNextDemi;
+    }
+    @include tablet {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-family: avenirNextDemi;
+    }
+    @include desktop {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-family: avenirNextDemi;
+    }
 }
 
 @mixin body-copy {
-    font-size: 0.813rem;
-    line-height: 1.125rem;
+    @include mobile {
+        font-size: 0.813rem;
+        line-height: 1.125rem;
+    }
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+    @include desktop {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
 }
 
 @mixin footer-copy {
-    font-size: 0.813rem;
-    line-height: 1.125rem;
+    @include mobile {
+        font-size: 0.813rem;
+        line-height: 1.125rem;
+    }
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+    @include desktop {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
 }
 
 @mixin labels-buttons {
-    font-size: 0.625rem;
-    line-height: 1.25rem;
-    font-family: avenirNextBold;;
+    @include mobile {
+        font-size: 0.625rem;
+        line-height: 1.25rem;
+        font-family: avenirNextBold;
+    }
+    @include tablet {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        font-family: avenirNextBold;
+    }
+    @include desktop {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        font-family: avenirNextBold;
+    }
 }
-
-// desktop&tablet text styles
-// @mixin page-header {
-//     font-size: 60px;
-//     line-height: 68px;
-//     font-weight: $bold;
-// }
-
-// @mixin section-header {
-//     font-size: 36px;
-//     line-height: 44px;
-//     font-weight: $bold;
-// }
-
-// @mixin subheader {
-//     font-size: 1.5rem;
-//     line-height: 2rem;
-//     font-weight: $demi;
-// }
-
-// @mixin body-copy {
-//     font-size: 0.875rem;
-//     line-height: 1.375rem;
-//     font-weight: $regular;
-// }
-
-// @mixin footer-copy {
-//     font-size: 0.875rem;
-//     line-height: 1.25rem;
-//     font-weight: $regular;
-// }
-
-// @mixin labels-buttons {
-//     font-size: 12px;
-//     line-height: 1.25rem;
-//     font-weight: $bold;
-// }

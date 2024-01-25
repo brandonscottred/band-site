@@ -104,6 +104,7 @@ main {
 }
 
 .photo-gallery {
+    background-color: $alabaster;
     @include mobile {
         padding: 1rem;
     }
@@ -118,6 +119,11 @@ main {
         img {
             max-width: 100%;
             margin: 0.5rem 0;
+            filter: grayscale(1);
+
+            &:hover {
+                filter: grayscale(0);
+            }
         }
     }
 }

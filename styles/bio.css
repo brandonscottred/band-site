@@ -1,6 +1,6 @@
 @font-face {
   font-family: avenirNextRegular;
-  src: url(../../assets/fonts/alternative-files/AvenirNextLTPro.ttf);
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf);
 }
 @font-face {
   font-family: avenirNextDemi;
@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: avenirNextBold;
-  src: url(../../assets/fonts/alternative-files/AvenirNextLTProBold.ttf);
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf);
 }
 * {
   box-sizing: border-box;
@@ -34,9 +34,27 @@ body {
 .navbar__subheader {
   display: flex;
   width: 100vw;
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-family: avenirNextDemi;
+}
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .navbar__subheader {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: avenirNextDemi;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .navbar__subheader {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextDemi;
+  }
+}
+@media ((min-width: 1280px)) {
+  .navbar__subheader {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextDemi;
+  }
 }
 .navbar__subheader--biography {
   border-bottom: white 4px solid;
@@ -71,9 +89,27 @@ body {
 }
 .navbar__hero--title {
   padding-left: 1rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: avenirNextBold;
+}
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .navbar__hero--title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextBold;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .navbar__hero--title {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-family: avenirNextBold;
+  }
+}
+@media ((min-width: 1280px)) {
+  .navbar__hero--title {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-family: avenirNextBold;
+  }
 }
 
 main {
@@ -86,54 +122,159 @@ main {
   }
 }
 .biography__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: avenirNextBold;
   margin: 8px 0 16px 0;
+}
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .biography__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextBold;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .biography__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: avenirNextBold;
+  }
+}
+@media ((min-width: 1280px)) {
+  .biography__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: avenirNextBold;
+  }
 }
 .biography__image {
   max-width: 100%;
 }
-.biography__quote {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-family: avenirNextDemi;
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .biography__quote {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: avenirNextDemi;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .biography__quote {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextDemi;
+  }
+}
+@media ((min-width: 1280px)) {
+  .biography__quote {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextDemi;
+  }
 }
 .biography__quote--bryan-teddy {
   padding-top: 0.5rem;
 }
-.biography__description--title {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-family: avenirNextDemi;
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .biography__description--title {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: avenirNextDemi;
+  }
 }
-.biography__description--text {
-  font-size: 0.813rem;
-  line-height: 1.125rem;
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .biography__description--title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextDemi;
+  }
+}
+@media ((min-width: 1280px)) {
+  .biography__description--title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextDemi;
+  }
+}
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .biography__description--text {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .biography__description--text {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media ((min-width: 1280px)) {
+  .biography__description--text {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 
+.photo-gallery {
+  background-color: #FAFAFA;
+}
 @media ((min-width: 320px) and (max-width: 767px)) {
   .photo-gallery {
     padding: 1rem;
   }
 }
 .photo-gallery__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: avenirNextBold;
   margin: 0;
+}
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .photo-gallery__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextBold;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .photo-gallery__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: avenirNextBold;
+  }
+}
+@media ((min-width: 1280px)) {
+  .photo-gallery__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: avenirNextBold;
+  }
 }
 .photo-gallery__image-container img {
   max-width: 100%;
   margin: 0.5rem 0;
+  filter: grayscale(1);
+}
+.photo-gallery__image-container img:hover {
+  filter: grayscale(0);
 }
 
 .footer {
   background-color: #323232;
   color: #FFFFFF;
   padding: 1rem;
-  font-size: 0.813rem;
-  line-height: 1.125rem;
+}
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .footer {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .footer {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+@media ((min-width: 1280px)) {
+  .footer {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 .footer__social--spacer {
   padding: 0 2rem;
