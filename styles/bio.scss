@@ -27,6 +27,8 @@
             width: 50%;
             display: flex;
             justify-content: center;
+            text-decoration: none;
+            color: $white;
         }
 
         &--shows {
@@ -34,10 +36,109 @@
             display: flex;
             justify-content: center;
             color: $mercury;
+            text-decoration: none;
+
+            &:hover {
+                border-bottom: white 4px solid;
+                width: 50%;
+                color: $white;
+            }
+        }
+    }
+
+    &__hero {
+        position: relative;
+        background-image: url(../assets/images/hero-bio.jpg);
+        background-position: center;
+        background-size: cover;
+        min-width: 100%;
+        min-height: 15rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &--title {
+            padding-left: 1rem;
+            @include page-header;
+            
         }
     }
 }
 
+main {
+    color: $bandsite-black;
+}
+
+.biography {
+        @include mobile {
+            padding: 1rem 1rem 0 1rem;
+        }
+    
+    &__title {
+        @include section-header;
+        margin: 8px 0 16px 0;
+    }
+
+    &__image {
+        max-width: 100%;
+    }
+
+    &__quote {
+        @include subheader;
+
+        &--bryan-teddy {
+            padding-top: 0.5rem;
+        }
+    }
+
+    &__description {
+
+        &--title {
+            @include subheader;
+        }
+
+        &--text {
+            @include body-copy;
+        }
+    }
+}
+
+.photo-gallery {
+    @include mobile {
+        padding: 1rem;
+    }
+
+    &__title {
+        @include section-header;
+        margin: 0;
+    }
+
+    &__image-container {
+
+        img {
+            max-width: 100%;
+            margin: 0.5rem 0;
+        }
+    }
+}
+
+.footer {
+    background-color: $bandsite-black;
+    color: $white;
+    padding: 1rem;
+    @include footer-copy;
+    
+    &__social {
+
+        &--spacer {
+            padding: 0 2rem;
+        }
+    }
+
+    &__contact {
+        padding-bottom: 3rem;
+    }
+}
 
 // media queries lab + responsive design lab
 // include tablet + desktop

@@ -10,10 +10,13 @@
   font-family: avenirNextBold;
   src: url(../../assets/fonts/alternative-files/AvenirNextLTProBold.ttf);
 }
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: avenirNextRegular;
 }
 
@@ -31,8 +34,8 @@ body {
 .navbar__subheader {
   display: flex;
   width: 100vw;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-family: avenirNextDemi;
 }
 .navbar__subheader--biography {
@@ -40,10 +43,101 @@ body {
   width: 50%;
   display: flex;
   justify-content: center;
+  text-decoration: none;
+  color: #FFFFFF;
 }
 .navbar__subheader--shows {
   width: 50%;
   display: flex;
   justify-content: center;
   color: #E1E1E1;
+  text-decoration: none;
+}
+.navbar__subheader--shows:hover {
+  border-bottom: white 4px solid;
+  width: 50%;
+  color: #FFFFFF;
+}
+.navbar__hero {
+  position: relative;
+  background-image: url(../assets/images/hero-bio.jpg);
+  background-position: center;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 15rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.navbar__hero--title {
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: avenirNextBold;
+}
+
+main {
+  color: #323232;
+}
+
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .biography {
+    padding: 1rem 1rem 0 1rem;
+  }
+}
+.biography__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: avenirNextBold;
+  margin: 8px 0 16px 0;
+}
+.biography__image {
+  max-width: 100%;
+}
+.biography__quote {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: avenirNextDemi;
+}
+.biography__quote--bryan-teddy {
+  padding-top: 0.5rem;
+}
+.biography__description--title {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: avenirNextDemi;
+}
+.biography__description--text {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .photo-gallery {
+    padding: 1rem;
+  }
+}
+.photo-gallery__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: avenirNextBold;
+  margin: 0;
+}
+.photo-gallery__image-container img {
+  max-width: 100%;
+  margin: 0.5rem 0;
+}
+
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 1rem;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+}
+.footer__social--spacer {
+  padding: 0 2rem;
+}
+.footer__contact {
+  padding-bottom: 3rem;
 }/*# sourceMappingURL=bio.css.map */

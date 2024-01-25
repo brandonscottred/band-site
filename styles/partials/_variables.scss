@@ -20,36 +20,36 @@
 // mobile text styles
 
 @mixin page-header {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-family: avenirNextBold;
 }
 
 @mixin section-header {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-family: avenirNextBold;
 }
 
 @mixin subheader {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-family: avenirNextDemi;
 }
 
 @mixin body-copy {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.813rem;
+    line-height: 1.125rem;
 }
 
 @mixin footer-copy {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.813rem;
+    line-height: 1.125rem;
 }
 
 @mixin labels-buttons {
-    font-size: 10px;
-    line-height: 20px;
+    font-size: 0.625rem;
+    line-height: 1.25rem;
     font-family: avenirNextBold;;
 }
 
@@ -67,25 +67,25 @@
 // }
 
 // @mixin subheader {
-//     font-size: 24px;
-//     line-height: 32px;
+//     font-size: 1.5rem;
+//     line-height: 2rem;
 //     font-weight: $demi;
 // }
 
 // @mixin body-copy {
-//     font-size: 14px;
-//     line-height: 22px;
+//     font-size: 0.875rem;
+//     line-height: 1.375rem;
 //     font-weight: $regular;
 // }
 
 // @mixin footer-copy {
-//     font-size: 14px;
-//     line-height: 20px;
+//     font-size: 0.875rem;
+//     line-height: 1.25rem;
 //     font-weight: $regular;
 // }
 
 // @mixin labels-buttons {
 //     font-size: 12px;
-//     line-height: 20px;
+//     line-height: 1.25rem;
 //     font-weight: $bold;
 // }
