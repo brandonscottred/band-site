@@ -4,66 +4,95 @@
 
 .navbar {
     background-color: $bandsite-black;
-    color: $white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1rem;
 
-    &__logo {
-
-        img {
-            width: 120px;
-        }
-    }
-
-    &__subheader {
+    &-container {
+        color: $white;
         display: flex;
-        width: 100vw;
-        @include subheader;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
 
-        &--biography {
-            border-bottom: white 4px solid;
+        @include tablet {
+            flex-direction: row;
             width: 50%;
-            display: flex;
-            justify-content: center;
-            text-decoration: none;
-            color: $white;
+            justify-content: space-around;
         }
-
-        &--shows {
-            width: 50%;
+        
+        &__logo {
+    
+            img {
+                width: 7.5rem;
+            }
+        }
+    
+        &__subheader {
             display: flex;
-            justify-content: center;
-            color: $mercury;
-            text-decoration: none;
-
-            &:hover {
+            width: 100%;
+            
+            @include tablet {
+                width: 50%;
+                justify-content: space-between;
+            }
+            
+            &--biography {
                 border-bottom: white 4px solid;
                 width: 50%;
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
                 color: $white;
+
+                @include tablet {
+                    width: auto;
+                }
+            }
+    
+            &--shows {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                color: $mercury;
+                text-decoration: none;
+    
+                &:hover {
+                    border-bottom: white 4px solid;
+                    width: 50%;
+                    color: $white;
+
+                    @include tablet {
+                        width: auto;
+                    }
+                }
+
+                @include tablet {
+                    width: auto;
+                }
             }
         }
     }
+}
 
-    &__hero {
-        position: relative;
-        background-image: url(../assets/images/hero-bio.jpg);
-        background-position: center;
-        background-size: cover;
-        min-width: 100%;
-        min-height: 15rem;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
 
-        &--title {
-            padding-left: 1rem;
-            @include page-header;
-            
-        }
+
+.hero-container {
+    position: relative;
+    text-align: center;
+    color: $white;
+
+    &__image{
+        max-width: 100%;
+    }
+
+    &__title {
+        @include page-header;
+        position: absolute;
+        top: 35%;
+        left: 5%;
     }
 }
+
+
+
 
 main {
     color: $bandsite-black;
