@@ -17,6 +17,13 @@
             width: 50%;
             justify-content: space-around;
         }
+
+        @include desktop {
+            flex-direction: row;
+            padding-left: 5%;
+            width: 40%;
+            justify-content: space-around;
+        }
         
         &__logo {
     
@@ -33,6 +40,11 @@
                 width: 50%;
                 justify-content: space-between;
             }
+
+            @include desktop {
+                width: 50%;
+                justify-content: space-around;
+            }
             
             &--biography {
                 border-bottom: white 4px solid;
@@ -43,6 +55,10 @@
                 color: $white;
 
                 @include tablet {
+                    width: auto;
+                }
+
+                @include desktop {
                     width: auto;
                 }
             }
@@ -62,9 +78,17 @@
                     @include tablet {
                         width: auto;
                     }
+
+                    @include desktop {
+                        width: auto;
+                    }
                 }
 
                 @include tablet {
+                    width: auto;
+                }
+
+                @include desktop {
                     width: auto;
                 }
             }
@@ -102,25 +126,87 @@ main {
         @include mobile {
             padding: 1rem 1rem 0 1rem;
         }
+
+        @include tablet {
+            padding: 2.25rem 2.25rem 0 2.25rem;
+        }
+        @include desktop {
+            padding: 2.25rem 2.25rem 0 2.25rem;
+            display: flex;
+            flex-direction: column;
+        }
     
     &__title {
         @include section-header;
         margin: 8px 0 16px 0;
+
+        @include tablet {
+            margin: 16px 36px 36px 36px;
+        }
+        @include desktop {
+            margin: 16px 36px 36px 36px;
+        }
     }
 
-    &__image {
-        max-width: 100%;
+    &__container {
+
+        @include tablet {
+            margin: 0 36px 36px 36px;
+        }
+        @include desktop {
+            margin: 0 36px 36px 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            max-width: 80%;
+        }
+
+        &--image {
+            max-width: 100%;
+
+            @include tablet {
+            padding-bottom: 1rem;
+            
+        }
+            @include desktop {
+            padding-bottom: 1rem;
+        }
     }
+    
+        &--quote {
+            @include subheader;
 
-    &__quote {
-        @include subheader;
+            @include desktop {
+                width: 74%;
+            }
+    
+            &--bryan-teddy {
+                padding-top: 0.5rem;
 
-        &--bryan-teddy {
-            padding-top: 0.5rem;
+                @include tablet {
+                    padding-top: 1rem;
+                }
+                @include desktop {
+                    padding-top: 1rem;
+                }
+            }
         }
     }
 
     &__description {
+
+        @include tablet {
+            margin: 0 36px 36px 36px;
+        }
+         @include desktop {
+            margin: 0 36px 36px 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            max-width: 80%;     
+        }
 
         &--title {
             @include subheader;
@@ -128,6 +214,23 @@ main {
 
         &--text {
             @include body-copy;
+
+            @include tablet {
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    width: 45%;
+                }
+            }
+            @include desktop {
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    width: 45%;
+                }
+            }
         }
     }
 }
@@ -138,12 +241,41 @@ main {
         padding: 1rem;
     }
 
+    @include tablet {
+        padding: 36px;
+    }
+    @include desktop {
+        padding: 46px;
+    }
+
     &__title {
-        @include section-header;
+        @include page-header;
         margin: 0;
+
+        @include tablet {
+            padding: 1rem 0 1rem;
+        }
+
+        @include desktop {
+            padding: 48px 0 36px 36px;
+        }
     }
 
     &__image-container {
+
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            min-width: 100%;
+        }
+        @include desktop {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: space-evenly;
+            min-width: 100%;
+        }
 
         img {
             max-width: 100%;
@@ -152,6 +284,13 @@ main {
 
             &:hover {
                 filter: grayscale(0);
+            }
+
+            @include tablet {
+                max-width: 30%;
+            }
+            @include desktop {
+                max-width: 30%;
             }
         }
     }
@@ -162,6 +301,14 @@ main {
     color: $white;
     padding: 1rem;
     @include footer-copy;
+
+    @include tablet {
+        padding: 36px;
+    }
+
+    &__title {
+        @include subheader;
+    }
     
     &__social {
 
@@ -172,6 +319,11 @@ main {
 
     &__contact {
         padding-bottom: 3rem;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
 
