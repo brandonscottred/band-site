@@ -14,6 +14,7 @@
 
         @include tablet {
             flex-direction: row;
+            padding-left: 5%;
             width: 50%;
             justify-content: space-around;
         }
@@ -21,7 +22,7 @@
         @include desktop {
             flex-direction: row;
             padding-left: 5%;
-            width: 40%;
+            width: 50%;
             justify-content: space-around;
         }
         
@@ -43,7 +44,7 @@
 
             @include desktop {
                 width: 50%;
-                justify-content: space-around;
+                justify-content: space-between;
             }
             
             &--biography {
@@ -115,9 +116,6 @@
     }
 }
 
-
-
-
 main {
     color: $bandsite-black;
 }
@@ -151,10 +149,10 @@ main {
     &__container {
 
         @include tablet {
-            margin: 0 36px 36px 36px;
+            margin: 0 36px 1.5rem 36px;
         }
         @include desktop {
-            margin: 0 36px 36px 36px;
+            margin: 0 36px 1.5rem 36px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -178,7 +176,8 @@ main {
             @include subheader;
 
             @include desktop {
-                width: 74%;
+                width: 65%;
+                text-align: left;
             }
     
             &--bryan-teddy {
@@ -249,15 +248,15 @@ main {
     }
 
     &__title {
-        @include page-header;
+        @include section-header;
         margin: 0;
 
         @include tablet {
-            padding: 1rem 0 1rem;
+            padding: 1rem 0 2rem 1rem;
         }
 
         @include desktop {
-            padding: 48px 0 36px 36px;
+            padding: 2rem 0 1rem 1.5rem;
         }
     }
 
@@ -291,6 +290,7 @@ main {
             }
             @include desktop {
                 max-width: 30%;
+                margin: 1rem 0.5rem;
             }
         }
     }

@@ -33,6 +33,7 @@ body {
 @media ((min-width: 768px) and (max-width: 1279px)) {
   .navbar-container {
     flex-direction: row;
+    padding-left: 5%;
     width: 50%;
     justify-content: space-around;
   }
@@ -41,7 +42,7 @@ body {
   .navbar-container {
     flex-direction: row;
     padding-left: 5%;
-    width: 40%;
+    width: 50%;
     justify-content: space-around;
   }
 }
@@ -61,7 +62,7 @@ body {
 @media ((min-width: 1280px)) {
   .navbar-container__subheader {
     width: 50%;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 .navbar-container__subheader--biography {
@@ -207,12 +208,12 @@ main {
 }
 @media ((min-width: 768px) and (max-width: 1279px)) {
   .biography__container {
-    margin: 0 36px 36px 36px;
+    margin: 0 36px 1.5rem 36px;
   }
 }
 @media ((min-width: 1280px)) {
   .biography__container {
-    margin: 0 36px 36px 36px;
+    margin: 0 36px 1.5rem 36px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -256,7 +257,8 @@ main {
 }
 @media ((min-width: 1280px)) {
   .biography__container--quote {
-    width: 74%;
+    width: 65%;
+    text-align: left;
   }
 }
 .biography__container--quote--bryan-teddy {
@@ -375,26 +377,26 @@ main {
 }
 @media ((min-width: 768px) and (max-width: 1279px)) {
   .photo-gallery__title {
-    font-size: 3.75rem;
-    line-height: 4.25rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-family: avenirNextBold;
   }
 }
 @media ((min-width: 1280px)) {
   .photo-gallery__title {
-    font-size: 3.75rem;
-    line-height: 4.25rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-family: avenirNextBold;
   }
 }
 @media ((min-width: 768px) and (max-width: 1279px)) {
   .photo-gallery__title {
-    padding: 1rem 0 1rem;
+    padding: 1rem 0 2rem 1rem;
   }
 }
 @media ((min-width: 1280px)) {
   .photo-gallery__title {
-    padding: 48px 0 36px 36px;
+    padding: 2rem 0 1rem 1.5rem;
   }
 }
 @media ((min-width: 768px) and (max-width: 1279px)) {
@@ -430,6 +432,7 @@ main {
 @media ((min-width: 1280px)) {
   .photo-gallery__image-container img {
     max-width: 30%;
+    margin: 1rem 0.5rem;
   }
 }
 
