@@ -198,22 +198,22 @@ main {
 }
 @media ((min-width: 768px) and (max-width: 1279px)) {
   .biography__title {
-    margin: 16px 36px 36px 36px;
+    margin: 16px 2.25rem 2.25rem 2.25rem;
   }
 }
 @media ((min-width: 1280px)) {
   .biography__title {
-    margin: 16px 36px 36px 36px;
+    margin: 16px 2.25rem 2.25rem 2.25rem;
   }
 }
 @media ((min-width: 768px) and (max-width: 1279px)) {
   .biography__container {
-    margin: 0 36px 1.5rem 36px;
+    margin: 0 2.25rem 1.5rem 2.25rem;
   }
 }
 @media ((min-width: 1280px)) {
   .biography__container {
-    margin: 0 36px 1.5rem 36px;
+    margin: 0 2.25rem 1.5rem 2.25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -276,12 +276,12 @@ main {
 }
 @media ((min-width: 768px) and (max-width: 1279px)) {
   .biography__description {
-    margin: 0 36px 36px 36px;
+    margin: 0 2.25rem 2.25rem 2.25rem;
   }
 }
 @media ((min-width: 1280px)) {
   .biography__description {
-    margin: 0 36px 36px 36px;
+    margin: 0 2.25rem 2.25rem 2.25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -357,12 +357,12 @@ main {
 }
 @media ((min-width: 768px) and (max-width: 1279px)) {
   .photo-gallery {
-    padding: 36px;
+    padding: 2.25rem;
   }
 }
 @media ((min-width: 1280px)) {
   .photo-gallery {
-    padding: 46px;
+    padding: 3rem;
   }
 }
 .photo-gallery__title {
@@ -461,28 +461,62 @@ main {
 }
 @media ((min-width: 768px) and (max-width: 1279px)) {
   .footer {
-    padding: 36px;
+    display: flex;
+    padding: 2.5% 7%;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 0 3rem;
+  }
+}
+@media ((min-width: 1280px)) {
+  .footer {
+    display: flex;
+    padding: 2.5% 7%;
+    position: relative;
+    flex-wrap: wrap;
   }
 }
 @media ((min-width: 320px) and (max-width: 767px)) {
   .footer__title {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-family: avenirNextDemi;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextBold;
   }
 }
 @media ((min-width: 768px) and (max-width: 1279px)) {
   .footer__title {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-family: avenirNextDemi;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: avenirNextBold;
   }
 }
 @media ((min-width: 1280px)) {
   .footer__title {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-family: avenirNextDemi;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: avenirNextBold;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .footer__title {
+    width: 35%;
+  }
+}
+@media ((min-width: 1280px)) {
+  .footer__title {
+    width: 35%;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .footer__social {
+    align-self: center;
+    width: 20%;
+  }
+}
+@media ((min-width: 1280px)) {
+  .footer__social {
+    align-self: center;
+    width: 20%;
   }
 }
 .footer__social--spacer {
@@ -495,5 +529,27 @@ main {
   .footer__contact {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+  }
+}
+@media ((min-width: 1280px)) {
+  .footer__contact {
+    display: flex;
+    justify-content: space-between;
+    min-width: 80%;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .footer__logo {
+    position: absolute;
+    top: 17%;
+    right: 7%;
+  }
+}
+@media ((min-width: 1280px)) {
+  .footer__logo {
+    position: absolute;
+    top: 21%;
+    right: 7%;
   }
 }/*# sourceMappingURL=bio.css.map */

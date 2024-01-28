@@ -139,20 +139,20 @@ main {
         margin: 8px 0 16px 0;
 
         @include tablet {
-            margin: 16px 36px 36px 36px;
+            margin: 16px 2.25rem 2.25rem 2.25rem;
         }
         @include desktop {
-            margin: 16px 36px 36px 36px;
+            margin: 16px 2.25rem 2.25rem 2.25rem;
         }
     }
 
     &__container {
 
         @include tablet {
-            margin: 0 36px 1.5rem 36px;
+            margin: 0 2.25rem 1.5rem 2.25rem;
         }
         @include desktop {
-            margin: 0 36px 1.5rem 36px;
+            margin: 0 2.25rem 1.5rem 2.25rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -196,10 +196,10 @@ main {
     &__description {
 
         @include tablet {
-            margin: 0 36px 36px 36px;
+            margin: 0 2.25rem 2.25rem 2.25rem;
         }
          @include desktop {
-            margin: 0 36px 36px 36px;
+            margin: 0 2.25rem 2.25rem 2.25rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -241,10 +241,10 @@ main {
     }
 
     @include tablet {
-        padding: 36px;
+        padding: 2.25rem;
     }
     @include desktop {
-        padding: 46px;
+        padding: 3rem;
     }
 
     &__title {
@@ -303,14 +303,41 @@ main {
     @include footer-copy;
 
     @include tablet {
-        padding: 36px;
+        display: flex;
+        padding: 2.5% 7%;
+        position: relative;
+        flex-wrap: wrap;
+        gap: 0 3rem;
+    }
+
+    @include desktop {
+        display: flex;
+        padding: 2.5% 7%;
+        position: relative;
+        flex-wrap: wrap;
     }
 
     &__title {
-        @include subheader;
+        @include section-header;
+
+        @include tablet {
+            width: 35%;
+        }
+        @include desktop {
+            width: 35%;
+        }
     }
     
     &__social {
+
+        @include tablet {
+            align-self: center;
+            width: 20%;
+        }
+        @include desktop {
+            align-self: center;
+            width: 20%;
+        }
 
         &--spacer {
             padding: 0 2rem;
@@ -322,11 +349,30 @@ main {
 
         @include tablet {
             display: flex;
+            justify-content: space-between;            
+            width: 100%;
+        }      
+
+        @include desktop {
+            display: flex;
             justify-content: space-between;
+            min-width: 80%;
         }
     }
-}
 
-// media queries lab + responsive design lab
-// include tablet + desktop
-// @include
+    &__logo {
+
+        @include tablet{
+            position: absolute;
+            top: 17%;
+            right: 7%;
+        }
+
+        @include desktop {
+            position: absolute;
+            top: 21%;
+            right: 7%;
+        }
+
+    }
+}
