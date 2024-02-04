@@ -296,6 +296,16 @@ main {
     }
 }
 
+.comments {
+
+    &__avatar {
+        vertical-align: left;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
+
 .footer {
     background-color: $bandsite-black;
     color: $white;
