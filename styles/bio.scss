@@ -298,11 +298,29 @@ main {
 
 .comments {
 
+    @include mobile {
+        padding: 1rem 1rem 0 1rem;
+
+        &-container {
+            display: flex;
+            justify-content: space-between
+        }
+    }
+
+    &__title {
+        @include section-header;
+    }
+
     &__avatar {
         vertical-align: left;
         width: 50px;
         height: 50px;
         border-radius: 50%;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
     }
 }
 

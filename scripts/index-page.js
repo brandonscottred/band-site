@@ -50,10 +50,13 @@ function renderComments() {
     comments.innerHTML = '';
     commentsArray.forEach(function (comment) {
         const commentName = document.createElement('h3');
+        commentName.className = "comments__card--title";
         commentName.innerText = comment.name;
         const commentText = document.createElement('p');
+        commentText.className = "comments__card--text";
         commentText.innerText = comment.comment;
         const commentDate = document.createElement('p');
+        commentDate.className = "comments__card--date";
         commentDate.innerText = comment.timestamp;
 
         comments.appendChild(commentName);

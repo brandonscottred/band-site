@@ -436,11 +436,45 @@ main {
   }
 }
 
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .comments {
+    padding: 1rem 1rem 0 1rem;
+  }
+  .comments-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .comments__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextBold;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .comments__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: avenirNextBold;
+  }
+}
+@media ((min-width: 1280px)) {
+  .comments__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: avenirNextBold;
+  }
+}
 .comments__avatar {
   vertical-align: left;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+.comments__form {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer {
