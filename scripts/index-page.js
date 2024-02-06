@@ -34,7 +34,7 @@ commentsForm.addEventListener('submit', function (event) {
     const inputCommentVal = event.target.Comment.value;
 
     if (inputNameVal !== '' && inputCommentVal !== '') {
-        commentsArray.push ({
+        commentsArray.unshift ({
             name: inputNameVal,
             timestamp: currentDate,
             comment: inputCommentVal,
