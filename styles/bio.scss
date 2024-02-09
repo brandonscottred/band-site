@@ -297,30 +297,48 @@ main {
 }
 
 .comments {
-
-    @include mobile {
-        padding: 1rem 1rem 0 1rem;
-
-        &-container {
-            display: flex;
-            justify-content: space-between
-        }
-    }
+    padding: 1rem 1rem 0 1rem;
 
     &__title {
         @include section-header;
     }
 
-    &__avatar {
-        vertical-align: left;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 2rem 0;
+
+        &__avatar {
+            vertical-align: left;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
-    &__form {
+    &__card {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 90%;
+        margin: auto;
+
+        &--title {
+            @include subheader;
+            width: 60%;
+        }
+
+        &--date {
+            color: $mercury;
+            @include subheader;
+            width: 40%;
+            align-self: center;
+        }
     }
 }
 
