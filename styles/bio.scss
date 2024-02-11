@@ -397,6 +397,11 @@ main {
                     padding: 0 32px;
                     align-self: flex-end;
                 }
+                @include desktop {
+                    width: 150px;
+                    padding: 0 32px;
+                    align-self: flex-end;
+                }
 
                 &:hover {
                     background-color: $bandsite-darkblack;
@@ -417,6 +422,9 @@ main {
         @include tablet {
             max-width: 80%;
         }
+        @include desktop {
+            max-width: 50%;
+        }
 
         &--avatar {
             background-color: $mercury;
@@ -429,6 +437,9 @@ main {
         &--container {
 
             @include tablet {
+                padding-bottom: 1rem;
+            }
+            @include desktop {
                 padding-bottom: 1rem;
             }
 

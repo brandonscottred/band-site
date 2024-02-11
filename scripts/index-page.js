@@ -47,7 +47,6 @@ commentsForm.addEventListener('submit', function (event) {
 });
 
 
-// const comments = document.querySelector('.comments__card');
 
 function renderComments() {
     comments.innerHTML = '';
