@@ -39,40 +39,49 @@ const showsArray = [
     }
 ];
 
+const showsHeader = document.createElement('h1');
+showsHeader.className = 'container__header';
+showsHeader.innerText = 'Shows';
+
+container.appendChild(showsHeader);
+
 showsArray.forEach(function(show) {
     for (let i = 0; i < showsArray.length; i++) {
 
         const showsContainer = document.createElement('div');
-        showsContainer.className = 'shows';
+        showsContainer.className = 'container__shows';
 
         container.appendChild(showsContainer)
 
         const dateHeading = document.createElement('p');
-        dateHeading.className = 'shows__date--heading';
+        dateHeading.className = 'container__shows--heading';
         dateHeading.innerText = 'Date';
         const dateValue = document.createElement('p');
-        dateValue.className = 'shows__date--value';
+        dateValue.className = 'container__shows--value-bold';
         dateValue.innerText = show.date;
 
         const venueHeading = document.createElement('p');
-        venueHeading.className = 'shows__venue--heading';
+        venueHeading.className = 'container__shows--heading';
         venueHeading.innerText = 'Venue';
         const venueValue = document.createElement('p');
-        venueValue.className = 'shows__venue--value';
+        venueValue.className = 'container__shows--value';
         venueValue.innerText = show.venue;
 
         const locationHeading = document.createElement('p');
-        locationHeading.className = 'shows__location--heading';
+        locationHeading.className = 'container__shows--heading';
         locationHeading.innerText = 'Location';
         const locationValue = document.createElement('p');
-        locationValue.className = 'shows__location--value';
+        locationValue.className = 'container__shows--value';
         locationValue.innerText = show.location;
 
         
         const buyTicketsBtn = document.createElement('input');
         buyTicketsBtn.type = "submit";
-        buyTicketsBtn.className = "shows__buy-tickets";
+        buyTicketsBtn.className = "container__shows--buy-tickets";
         buyTicketsBtn.value = 'BUY TICKETS';
+
+        const divider = document.createElement('div');
+        divider.className = 'container__shows--divider';
 
 
         showsContainer.appendChild(dateHeading);
@@ -85,6 +94,8 @@ showsArray.forEach(function(show) {
         showsContainer.appendChild(locationValue);
 
         showsContainer.appendChild(buyTicketsBtn);
+
+        showsContainer.appendChild(divider);
 
         break; 
 

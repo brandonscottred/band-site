@@ -111,6 +111,7 @@
     &__title {
         @include page-header;
         position: absolute;
+        opacity: 100%;
         top: 35%;
         left: 5%;
     }

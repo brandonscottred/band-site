@@ -126,6 +126,7 @@ body {
 }
 .hero-container__title {
   position: absolute;
+  opacity: 100%;
   top: 35%;
   left: 5%;
 }

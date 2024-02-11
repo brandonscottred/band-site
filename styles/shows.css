@@ -116,6 +116,120 @@ body {
   }
 }
 
+.hero-container {
+  position: relative;
+  color: #FFFFFF;
+}
+.hero-container__image {
+  max-width: 100%;
+}
+.hero-container__text {
+  text-align: left;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+.hero-container__iframe {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+
+.container {
+  padding: 12px;
+}
+.container__header {
+  padding-bottom: 12px;
+}
+.container__shows--heading {
+  margin-bottom: 4px;
+  color: #AFAFAF;
+}
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .container__shows--heading {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .container__shows--heading {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+@media ((min-width: 1280px)) {
+  .container__shows--heading {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+.container__shows--value-bold {
+  margin-top: 0px;
+}
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .container__shows--value-bold {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: avenirNextDemi;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .container__shows--value-bold {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextDemi;
+  }
+}
+@media ((min-width: 1280px)) {
+  .container__shows--value-bold {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextDemi;
+  }
+}
+.container__shows--value {
+  margin-top: 0px;
+}
+.container__shows--buy-tickets {
+  margin-bottom: 12px;
+  height: 40px;
+  background-color: #323232;
+  color: #FFFFFF;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+}
+@media ((min-width: 320px) and (max-width: 767px)) {
+  .container__shows--buy-tickets {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: avenirNextDemi;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1279px)) {
+  .container__shows--buy-tickets {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextDemi;
+  }
+}
+@media ((min-width: 1280px)) {
+  .container__shows--buy-tickets {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenirNextDemi;
+  }
+}
+.container__shows--buy-tickets:hover {
+  background-color: #000000;
+}
+.container__shows--divider {
+  border-bottom: 1px #E1E1E1 solid;
+  position: absolute;
+  width: 100%;
+}
+
 .footer {
   background-color: #323232;
   color: #FFFFFF;
