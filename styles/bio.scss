@@ -297,27 +297,64 @@ main {
 }
 
 .comments {
-    padding: 1rem 1rem 0 1rem;
 
     &__title {
         @include section-header;
+        padding-left: 1.5rem;
     }
 
     &-container {
         display: flex;
         justify-content: space-between;
         margin: 0 0 2rem 0;
+        padding: 12px;
 
         &__avatar {
-            vertical-align: left;
-            width: 50px;
-            height: 50px;
+
+            padding: 12px;
+
+            &--img {
             border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            }
         }
 
         &__form {
             display: flex;
             flex-direction: column;
+            width: 80%;
+
+            &--label {
+                @include body-copy;
+                color: $silver;
+            }
+
+            &--name {
+                min-height: 36px;
+                margin-bottom: 1rem;
+                border-radius: 4px;
+            }
+
+            &--comment {
+                min-height: 36px;
+                margin-bottom: 1rem;
+                border-radius: 4px;
+            }
+
+            &--cta {
+                height: 40px;
+                background-color: $bandsite-black;
+                color: $white;
+                width: 100%;
+                border: none;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: $bandsite-darkblack;
+    
+                }
+            }
         }
     }
 
@@ -327,6 +364,7 @@ main {
         justify-content: space-between;
         max-width: 90%;
         margin: auto;
+        padding-bottom: 1rem;
 
         &--title {
             @include subheader;
@@ -339,7 +377,17 @@ main {
             width: 40%;
             align-self: center;
         }
+
+        &--divider {
+            border-bottom: 1px $mercury solid;
+            width: 100%;
+        }
     }
+}
+
+.divider {
+    border-bottom: $mercury 5px solid;
+    width: 100%;
 }
 
 .footer {

@@ -100,22 +100,21 @@
                 Join the Conversation
             </h1>
             <div class="comments-container">
-                <div>
-                    <img class="comments-container__avatar" src="./assets/images/Mohan-muruge.jpg" alt="">
+                <div class="comments-container__avatar">
+                    <img class="comments-container__avatar--img" src="./assets/images/Mohan-muruge.jpg" alt="">
                 </div>
-                <div class="comments-container__form">
-                    <form id="commentsForm" action="" class="comments__form">
-                        <label for="Name">NAME</label>
-                        <input type="text" name="Name">
-                        <label for="Comment">COMMENT</label>
-                        <input type="text" name="Comment">
-    
-                        <input type="submit" value="COMMENT">
-                    </form>
-                </div>
+                <form id="commentsForm" action="" class="comments-container__form">
+                    <label class="comments-container__form--label" for="Name">NAME</label>
+                    <input class="comments-container__form--name" type="text" name="Name" placeholder="Enter your name">
+                    <label class="comments-container__form--label" for="Comment">COMMENT</label>
+                    <input class="comments-container__form--comment" type="text" name="Comment" placeholder="Add a new comment">
+
+                    <input class="comments-container__form--cta" type="submit" value="COMMENT">
+                </form>
             </div>
 
             <div class="comments__card"></div>
+
 
         </section>
     </main>

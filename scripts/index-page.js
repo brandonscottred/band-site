@@ -58,10 +58,15 @@ function renderComments() {
         const commentDate = document.createElement('p');
         commentDate.className = "comments__card--date";
         commentDate.innerText = comment.timestamp;
+        const divider = document.createElement('div');
+        divider.className = 'comments__card--divider';
+
+        // make div and add class then style in scss
 
         comments.appendChild(commentName);
         comments.appendChild(commentDate);
         comments.appendChild(commentText);
+        comments.appendChild(divider);
     });
 }
 
