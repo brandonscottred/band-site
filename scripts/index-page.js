@@ -46,26 +46,36 @@ commentsForm.addEventListener('submit', function (event) {
     }
 });
 
+
+// const comments = document.querySelector('.comments__card');
+
 function renderComments() {
     comments.innerHTML = '';
     commentsArray.forEach(function (comment) {
+        const commentAvatar = document.createElement('img');
+        commentAvatar.className = 'comments__card--avatar';
+
+        const commentRendered = document.createElement('div');
+        commentRendered.className = 'comments__card--container';
+
         const commentName = document.createElement('h3');
-        commentName.className = "comments__card--title";
+        commentName.className = "comments__card--container-title";
         commentName.innerText = comment.name;
         const commentText = document.createElement('p');
-        commentText.className = "comments__card--text";
+        commentText.className = "comments__card--container-text";
         commentText.innerText = comment.comment;
         const commentDate = document.createElement('p');
-        commentDate.className = "comments__card--date";
+        commentDate.className = "comments__card--container-date";
         commentDate.innerText = comment.timestamp;
+
         const divider = document.createElement('div');
         divider.className = 'comments__card--divider';
 
-        // make div and add class then style in scss
-
-        comments.appendChild(commentName);
-        comments.appendChild(commentDate);
-        comments.appendChild(commentText);
+        comments.appendChild(commentAvatar);
+        comments.appendChild(commentRendered);
+        commentRendered.appendChild(commentName);
+        commentRendered.appendChild(commentDate);
+        commentRendered.appendChild(commentText);
         comments.appendChild(divider);
     });
 }

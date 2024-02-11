@@ -122,6 +122,8 @@ body {
 }
 .hero-container__image {
   max-width: 100%;
+  background-color: #323232;
+  opacity: 50%;
 }
 .hero-container__text {
   text-align: left;
@@ -228,6 +230,7 @@ body {
   border-bottom: 1px #E1E1E1 solid;
   position: absolute;
   width: 100%;
+  left: 0;
 }
 
 .footer {

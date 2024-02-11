@@ -104,6 +104,8 @@
 
     &__image{
         max-width: 100%;
+        background-color: $bandsite-black;
+        opacity: 50%;
     }
 
     &__text {
@@ -165,7 +167,7 @@
             border-bottom: 1px $mercury solid;
             position: absolute;
             width: 100%;
-            
+            left: 0;
         }
     }
 }

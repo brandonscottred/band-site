@@ -23,7 +23,7 @@
             flex-direction: row;
             padding-left: 5%;
             width: 50%;
-            justify-content: space-around;
+            justify-content: space-evenly;
         }
         
         &__logo {
@@ -44,7 +44,7 @@
 
             @include desktop {
                 width: 50%;
-                justify-content: space-between;
+                justify-content: space-around;
             }
             
             &--biography {
@@ -101,19 +101,23 @@
 
 .hero-container {
     position: relative;
-    text-align: center;
     color: $white;
 
     &__image{
         max-width: 100%;
+        background-color: $bandsite-black;
+        opacity: 75%;
+
     }
 
     &__title {
-        @include page-header;
         position: absolute;
-        opacity: 100%;
         top: 35%;
         left: 5%;
+
+        h1 {
+            @include page-header;
+        }
     }
 }
 
@@ -302,17 +306,42 @@ main {
     &__title {
         @include section-header;
         padding-left: 1.5rem;
+
+        @include desktop {
+            padding-left: 6%;
+        }
     }
 
     &-container {
         display: flex;
         justify-content: space-between;
-        margin: 0 0 2rem 0;
         padding: 12px;
+        border-bottom: $mercury 1px solid;
+        max-width: 90%;
+        margin: auto;
+
+        @include tablet {
+            justify-content: center;
+            max-width: 80%;
+            padding: 0;
+        }
+
+        @include desktop {
+            justify-content: center;
+            max-width: 50%;
+            padding: 0;
+        }
 
         &__avatar {
 
             padding: 12px;
+
+            @include tablet {
+                padding: 1.25rem;
+            }
+            @include desktop {
+                padding: 1.25rem;
+            }
 
             &--img {
             border-radius: 50%;
@@ -326,6 +355,13 @@ main {
             flex-direction: column;
             width: 80%;
 
+            @include tablet {
+                width: 100%;
+            }
+            @include desktop {
+                width: 100%;
+            }
+
             &--label {
                 @include body-copy;
                 color: $silver;
@@ -335,12 +371,16 @@ main {
                 min-height: 36px;
                 margin-bottom: 1rem;
                 border-radius: 4px;
+                background-color: $alabaster;
             }
 
             &--comment {
                 min-height: 36px;
                 margin-bottom: 1rem;
                 border-radius: 4px;
+                display: flex;
+                flex-wrap: wrap;
+                background-color: $alabaster;
             }
 
             &--cta {
@@ -350,6 +390,13 @@ main {
                 width: 100%;
                 border: none;
                 border-radius: 4px;
+                margin-bottom: 1rem;
+
+                @include tablet {
+                    width: 150px;
+                    padding: 0 32px;
+                    align-self: flex-end;
+                }
 
                 &:hover {
                     background-color: $bandsite-darkblack;
@@ -361,22 +408,38 @@ main {
 
     &__card {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: space-between;
         max-width: 90%;
         margin: auto;
         padding-bottom: 1rem;
 
-        &--title {
-            @include subheader;
-            width: 60%;
+        @include tablet {
+            max-width: 80%;
         }
 
-        &--date {
-            color: $mercury;
-            @include subheader;
-            width: 40%;
-            align-self: center;
+        &--avatar {
+            background-color: $mercury;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            margin: 12px;
+        }
+
+        &--container {
+
+            @include tablet {
+                padding-bottom: 1rem;
+            }
+
+            &-title {
+                @include subheader;
+            }
+    
+            &-date {
+                color: $mercury;
+                @include subheader;
+            }
         }
 
         &--divider {
@@ -386,10 +449,6 @@ main {
     }
 }
 
-.divider {
-    border-bottom: $mercury 5px solid;
-    width: 100%;
-}
 
 .footer {
     background-color: $bandsite-black;
