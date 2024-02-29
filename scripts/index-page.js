@@ -80,3 +80,13 @@ function renderComments() {
 }
 
 renderComments();
+
+const bandSiteApi = new BandSiteApi (apiKey);
+
+const defaultComments = bandSiteApi.getComment()
+
+const serverShows = bandSiteApi.getShows()
+
+// bandSiteApi.postComment()
+
+// bandSiteApi.deleteComment()

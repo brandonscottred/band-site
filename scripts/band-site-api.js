@@ -1,13 +1,16 @@
 const apiKey = '2fa79028-8fe0-4b68-abd1-b04f54b0dd8e';
-const baseUrl = 'https://project-1-api.herokuapp.com'
+const baseUrl = 'https://project-1-api.herokuapp.com';
+const comment = {
+    "name": "Brandon",
+    "comment": "coolio",
+};
+const delId = ""
 
 
 
 axios.get(`${baseUrl}/register`)
     .then ((response) => {
-        console.log(response);
-        console.log(response.data.api_key);
-        return response.data.api_key;
+        return response;
     }
 );
 
@@ -18,40 +21,38 @@ class BandSiteApi {
     }
     getComment() {
         return axios.get(this.baseUrl + '/comments?api_key=' + this.apiKey)
-            .then ((response) => 
-                (response)
-            )
+        .then ((response) => {
+            console.log(response.data)
+            return response.data
+        })
     }
     getShows() {
         return axios.get(this.baseUrl + '/showdates?api_key=' + this.apiKey)
-        .then ((response) => 
-            (response)
-        )
+        .then ((response) => {
+            console.log(response.data)
+            return response.data
+        })
     }
     postComment() {
-        return axios.post(this.baseUrl + '/comments?api_key=' + this.apiKey)
-        .then ((response) => 
-            (response)
-        )
+        return axios.post(this.baseUrl + '/comments?api_key=' + this.apiKey, comment)
+        .then ((response) => {
+            console.log(response.data)
+            return response.data
+        })
+    }
+    deleteComment() {
+        return axios.delete(this.baseUrl + `/comments/${delId}?api_key=` + this.apiKey)
+        .then ((response) => {
+            console.log(response.data)
+            return response.data
+        })
     }
 };
 
-const bandSiteApi = new BandSiteApi (apiKey);
-    bandSiteApi.getComment()
-    .then ((response) => {
-        console.log(response.data)
-    })
-    bandSiteApi.getShows()
-    .then ((response) => {
-        console.log(response.data)
-    })
 
 
 
 
-
-
-    // google MDN docs defining method withinj JS class (syntax)
 
 
 
