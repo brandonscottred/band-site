@@ -10,6 +10,27 @@ let currentDate = `${month}/${day}/${year}`;
 console.log(currentDate);
 
 
+
+const bandSiteApi = new BandSiteApi (apiKey);
+const defaultComments = bandSiteApi.getComment();
+const defaultShows = bandSiteApi.getShows();
+
+console.log(defaultComments);
+console.log(defaultShows);
+
+
+defaultComments.then(result => {
+    for(let i = 0; i < result.length; i++) {
+        console.log(result[i])
+    }
+});
+defaultShows.then(result => {
+    for(let i = 0; i < result.length; i++) {
+        console.log(result[i])
+    }
+});
+
+
 let commentsArray = [
     {
     name: 'Connor Walton',
@@ -80,12 +101,6 @@ function renderComments() {
 }
 
 renderComments();
-
-const bandSiteApi = new BandSiteApi (apiKey);
-
-const defaultComments = bandSiteApi.getComment()
-
-const serverShows = bandSiteApi.getShows()
 
 // bandSiteApi.postComment()
 
