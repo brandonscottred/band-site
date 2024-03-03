@@ -1,57 +1,82 @@
 const container = document.querySelector('.container');
-
-const showsArray = [
-
-    {
-        date: 'Mon Sept 06 2021',
-        venue: 'Ronald Lane',
-        location: 'San Francisco, CA'
-    },
-
-    {
-        date: 'Tue Sept 21 2021',
-        venue: 'Pier 3 East',
-        location: 'San Francisco, CA'
-    },
-
-    {
-        date: 'Fri Oct 15 2021',
-        venue: 'View Lounge',
-        location: 'San Francisco, CA'
-    },
-
-    {
-        date: 'Sat Nov 06 2021',
-        venue: 'Hyatt Agency',
-        location: 'San Francisco, CA'
-    },
-
-    {
-        date: 'Fri Nov 26 2021',
-        venue: 'Moscow Center',
-        location: 'San Francisco, CA'
-    },
-
-    {
-        date: 'Wed Dec 15 2021',
-        venue: 'Press Club',
-        location: 'San Francisco, CA'
-    }
-];
-
 const showsHeader = document.createElement('h1');
 showsHeader.className = 'container__header';
 showsHeader.innerText = 'Shows';
 
 container.appendChild(showsHeader);
 
-showsArray.forEach(function(show) {
-    for (let i = 0; i < showsArray.length; i++) {
+const showsArray = [
+    // {
+    //     date: 'Mon Sept 06 2021',
+    //     venue: 'Ronald Lane',
+    //     location: 'San Francisco, CA'
+    // },
 
+    // {
+    //     date: 'Tue Sept 21 2021',
+    //     venue: 'Pier 3 East',
+    //     location: 'San Francisco, CA'
+    // },
+
+    // {
+    //     date: 'Fri Oct 15 2021',
+    //     venue: 'View Lounge',
+    //     location: 'San Francisco, CA'
+    // },
+
+    // {
+    //     date: 'Sat Nov 06 2021',
+    //     venue: 'Hyatt Agency',
+    //     location: 'San Francisco, CA'
+    // },
+
+    // {
+    //     date: 'Fri Nov 26 2021',
+    //     venue: 'Moscow Center',
+    //     location: 'San Francisco, CA'
+    // },
+
+    // {
+    //     date: 'Wed Dec 15 2021',
+    //     venue: 'Press Club',
+    //     location: 'San Francisco, CA'
+    // }
+];
+
+const bandSiteApi = new BandSiteApi (apiKey);
+const defaultShowsPromise = bandSiteApi.getShows();
+console.log(defaultShowsPromise);
+
+defaultShowsPromise.then(result => {
+    for(let i = 0; i < result.length; i++) {
+        console.log('result[i]', result[i]);  
+        let defaultShowsChain = {
+            date: new Date(result[i].date),
+            venue: result[i].place,
+            location: result[i].location,
+        }
+        console.log('defaultshowschain', defaultShowsChain);
+        showsArray.push(defaultShowsChain);   
+    }
+    renderShows();
+}
+);
+
+console.log(showsArray);
+
+
+function renderShows() { 
+
+    showsArray.forEach(function(show) {
         const showsContainer = document.createElement('div');
         showsContainer.className = 'container__shows';
 
         container.appendChild(showsContainer)
+
+        
+    for (let i = 0; i < showsArray.length; i++) {
+
+  
 
         const dateHeading = document.createElement('p');
         dateHeading.className = 'container__shows--heading';
@@ -102,4 +127,5 @@ showsArray.forEach(function(show) {
 
     };
     
-});
+})
+};
