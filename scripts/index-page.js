@@ -1,13 +1,14 @@
 const commentsForm = document.getElementById('commentsForm');
 const comments = document.querySelector('.comments__card');
 
-const date = new Date();
-console.log(date);
-let day = date.getDate();
-let month = date.getMonth() + 1;
-let year = date.getFullYear();
-let currentDate = `${month}/${day}/${year}`;
-console.log(currentDate);
+function formatDate(timestamp) {
+    let toDate = new Date(timestamp).getDate();
+    let toMonth = new Date(timestamp).getMonth()+1;
+    let toYear = new Date(timestamp).getFullYear();
+    let original_date = toMonth+'/'+toDate+'/'+toYear;
+    return original_date;
+};
+
 
 // turn into a function to use for s2 AND s3
 
@@ -30,43 +31,22 @@ let commentsArray = [
 ];
 
 const bandSiteApi = new BandSiteApi (apiKey);
-const defaultCommentsPromise = bandSiteApi.getComment();
 
-console.log(defaultCommentsPromise);
+const defaultCommentsPromise = bandSiteApi.getComment();
+console.log(defaultCommentsPromise); /* use console to get ID of added comments to delete */
 
 defaultCommentsPromise
     .then(result => {
         for(let i = 0; i < result.length; i++) {
-            console.log(result[i]);
             let defaultCommentChain = {
                 name: result[i].name,
                 comment: result[i].comment,
-                timestamp: new Date(result[i].timestamp)
+                timestamp: formatDate(result[i].timestamp)
             }
             commentsArray.push(defaultCommentChain);
             renderComments();
         }
     });
-
-commentsForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-    const inputNameVal = event.target.Name.value;
-    const inputCommentVal = event.target.Comment.value;
-
-    if (inputNameVal !== '' && inputCommentVal !== '') {
-        commentsArray.unshift ({
-            name: inputNameVal,
-            timestamp: currentDate,
-            comment: inputCommentVal,
-        });
-        renderComments();
-        event.target.reset();
-    } else {
-        alert('please enter your name and a comment');
-    }
-});
-
-
 
 function renderComments() {
     comments.innerHTML = '';
@@ -101,7 +81,33 @@ function renderComments() {
 
 renderComments();
 
-// bandSiteApi.postComment()
-// add event listener
+commentsForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const inputNameVal = event.target.Name.value;
+    const inputCommentVal = event.target.Comment.value;
 
+    if (inputNameVal !== '' && inputCommentVal !== '') {
+        const postBody = {
+            "name": inputNameVal,
+            "comment": inputCommentVal,
+        };  
+        const postCommentServer = bandSiteApi.postComment(postBody);
+        console.log(postCommentServer);
+        postCommentServer
+            .then(result => {
+                commentsArray.unshift ({
+                    name: result.name,
+                    comment: result.comment,
+                    timestamp: currentDate,
+                });
+                console.log(postCommentServer);
+                renderComments();
+                event.target.reset()
+            })
+    } else {
+        alert('please enter your name and a comment')
+    }
+});
+
+// const delId = "897f85f7-3e1c-4acc-9284-ea7e9e71f0fd";
 // bandSiteApi.deleteComment()
