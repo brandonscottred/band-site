@@ -41,12 +41,14 @@ function renderComments() {
         const commentName = document.createElement('h3');
         commentName.className = "comments__card--container-title";
         commentName.innerText = comment.name;
-        const commentText = document.createElement('p');
-        commentText.className = "comments__card--container-text";
-        commentText.innerText = comment.comment;
+
         const commentDate = document.createElement('p');
         commentDate.className = "comments__card--container-date";
         commentDate.innerText = comment.timestamp;
+
+        const commentText = document.createElement('p');
+        commentText.className = "comments__card--container-text";
+        commentText.innerText = comment.comment;
 
         const divider = document.createElement('div');
         divider.className = 'comments__card--divider';
@@ -55,7 +57,7 @@ function renderComments() {
         comments.appendChild(commentRendered);
         commentRendered.appendChild(commentName);
         commentRendered.appendChild(commentDate);
-        commentRendered.appendChild(commentText);
+        comments.appendChild(commentText);
         comments.appendChild(divider);
     });
 }
@@ -90,5 +92,6 @@ commentsForm.addEventListener('submit', function (event) {
     }
 });
 
-// const delId = "897f85f7-3e1c-4acc-9284-ea7e9e71f0fd";
+// const delId = "";
 // bandSiteApi.deleteComment()
+// did not have time to finish this so I have it commented out because it works but needs input otherwise it throws an error

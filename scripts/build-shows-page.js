@@ -4,7 +4,6 @@ showsHeader.className = 'container__header';
 showsHeader.innerText = 'Shows';
 container.appendChild(showsHeader);
 
-
 function formatDate(timestamp) {
     let monthName = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
     let weekDay = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
@@ -16,43 +15,7 @@ function formatDate(timestamp) {
     return original_date;
 };
 
-const showsArray = [
-    // {
-    //     date: 'Mon Sept 06 2021',
-    //     venue: 'Ronald Lane',
-    //     location: 'San Francisco, CA'
-    // },
-
-    // {
-    //     date: 'Tue Sept 21 2021',
-    //     venue: 'Pier 3 East',
-    //     location: 'San Francisco, CA'
-    // },
-
-    // {
-    //     date: 'Fri Oct 15 2021',
-    //     venue: 'View Lounge',
-    //     location: 'San Francisco, CA'
-    // },
-
-    // {
-    //     date: 'Sat Nov 06 2021',
-    //     venue: 'Hyatt Agency',
-    //     location: 'San Francisco, CA'
-    // },
-
-    // {
-    //     date: 'Fri Nov 26 2021',
-    //     venue: 'Moscow Center',
-    //     location: 'San Francisco, CA'
-    // },
-
-    // {
-    //     date: 'Wed Dec 15 2021',
-    //     venue: 'Press Club',
-    //     location: 'San Francisco, CA'
-    // }
-];
+const showsArray = [];
 
 const bandSiteApi = new BandSiteApi (apiKey);
 const defaultShowsPromise = bandSiteApi.getShows();
@@ -70,9 +33,7 @@ defaultShowsPromise.then(result => {
 });
 
 function renderShows() { 
-
     showsArray.forEach(function(show) {
-
         const showsContainer = document.createElement('div');
         showsContainer.className = 'container__shows';
         container.appendChild(showsContainer)
@@ -106,13 +67,11 @@ function renderShows() {
             showsContainer.appendChild(locationHeading);
             showsContainer.appendChild(locationValue);
 
-            
             const buyTicketsBtn = document.createElement('input');
             buyTicketsBtn.type = "submit";
             buyTicketsBtn.className = "container__shows--buy-tickets";
             buyTicketsBtn.value = 'BUY TICKETS';
             showsContainer.appendChild(buyTicketsBtn);
-
 
             const divider = document.createElement('div');
             divider.className = 'container__shows--divider';

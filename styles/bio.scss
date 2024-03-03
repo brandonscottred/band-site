@@ -391,6 +391,7 @@ main {
                 border: none;
                 border-radius: 4px;
                 margin-bottom: 1rem;
+                cursor: pointer;
 
                 @include tablet {
                     width: 150px;
@@ -435,6 +436,8 @@ main {
         }
 
         &--container {
+            display: flex;
+            justify-content: space-between;
 
             @include tablet {
                 padding-bottom: 1rem;
